@@ -1,0 +1,17 @@
+{
+  "source": "./dist/map-manger/abase/",
+  "destination": "styleguide/docs/map-manger/class-doc/",
+  "plugins": [
+    {"name": "esdoc-standard-plugin"},
+    { "name": "esdoc-ecmascript-proposal-plugin", "option": { "all": true } },
+    {
+      "name": "esdoc-importpath-plugin",
+      "option": {
+        "stripPackageName": false,
+        "replaces": [
+          {"from": "^abase/", "to": "dist/map-manger/abase/"}
+        ]
+      }
+    }
+  ]
+}

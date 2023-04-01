@@ -1,0 +1,1845 @@
+{
+  "framework": "vue",
+  "name": "xb-lib-view",
+  "version": "1.0.0",
+  "contributions": {
+    "html": {
+      "description-markup": "markdown",
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "xb-breadcrumb",
+          "description": "",
+          "attributes": [
+            {
+              "name": "back",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "go",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "-1"
+            },
+            {
+              "name": "backConfirm",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            },
+            {
+              "name": "items",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[{\r\n  'name':'home'\r\n}]"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-breadcrumb.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-breadcrumb-tabs",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "()=>\"1\""
+            },
+            {
+              "name": "use_value",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "list",
+              "description": "标签列表，[{id:'1',name:'页面1'}]",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "content"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-breadcrumb-tabs.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-button-group",
+          "description": "",
+          "slots": [
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-button-group.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-dy-component",
+          "description": "",
+          "attributes": [
+            {
+              "name": "component",
+              "description": "组件 string | ComponentDefinition | ComponentConstructor",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            }
+          ],
+          "source": {
+            "module": "./dist/modal/xb-dy-component.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-ell",
+          "description": "",
+          "attributes": [
+            {
+              "name": "row",
+              "value": {
+                "kind": "expression",
+                "type": "string|number"
+              },
+              "default": "()=>1"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "other"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-ell.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-ell-pop",
+          "description": "",
+          "attributes": [
+            {
+              "name": "text",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "maxLength",
+              "value": {
+                "kind": "expression",
+                "type": "string|number"
+              },
+              "default": "10"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-ell-pop.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-file-list-preview",
+          "description": "",
+          "attributes": [
+            {
+              "name": "list",
+              "description": "{filename:'',url:''},",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "toMp3Url",
+              "description": "如果有音频文件，需要传这个 <br>\n\nprocess.env.VUE_APP_ApiUrl = http://new.szcgtest.xbcx.com.cn/szcg/admin <br />\n`${process.env.VUE_APP_ApiUrl}/upfile_server/core/upfile/mp3?ses_token=${LoginUtil.getToken()}`",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "0"
+              }
+            },
+            {
+              "name": "text_color",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'white'"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "clickGray"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-file-list-preview/xb-file-list-preview.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-file-list-preview-modal",
+          "description": "",
+          "attributes": [
+            {
+              "name": "list",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "toMp3Url",
+              "description": "如果有音频文件，需要传这个 <br>\n\nprocess.env.VUE_APP_ApiUrl = http://new.szcgtest.xbcx.com.cn/szcg/admin <br />\n`${process.env.VUE_APP_ApiUrl}/upfile_server/core/upfile/mp3?ses_token=${LoginUtil.getToken()}`",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-file-list-preview-modal.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-file-preview",
+          "description": "",
+          "attributes": [
+            {
+              "name": "url",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            },
+            {
+              "name": "thumbUrl",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-file-preview/xb-file-preview.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-filter-form",
+          "description": "",
+          "attributes": [
+            {
+              "name": "filterInputs",
+              "description": "[\n      {type:input,props:{}}\n     ]",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "apiRequest",
+              "description": "export const apiRequest = (url,params,{filterFromData,name}) =>\n    axios.post(url, params);",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            },
+            {
+              "name": "size",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'default'"
+            }
+          ],
+          "events": [
+            {
+              "name": "search"
+            },
+            {
+              "name": "reset"
+            },
+            {
+              "name": "change",
+              "description": "选项变了"
+            }
+          ],
+          "slots": [
+            {
+              "name": "button"
+            }
+          ],
+          "source": {
+            "module": "./dist/filter/xb-filter-form.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-form",
+          "description": "",
+          "attributes": [
+            {
+              "name": "form_data",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-form.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-form-item",
+          "description": "",
+          "attributes": [
+            {
+              "name": "name",
+              "value": {
+                "kind": "expression",
+                "type": "\"\""
+              }
+            },
+            {
+              "name": "prop",
+              "value": {
+                "kind": "expression",
+                "type": "\"\""
+              }
+            },
+            {
+              "name": "label",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "use_value_verification",
+              "description": "使用value验证值",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "requiredRight",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "item_flex",
+              "description": "item使用 flex 水平布局",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "item_label_width",
+              "description": "item使用 flex 水平布局时，label的宽度",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "colon",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "name": "labelCol",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "wrapperCol",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "rules",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "labelRight"
+            },
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-form-item.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-form-modal",
+          "description": "表单弹窗",
+          "attributes": [
+            {
+              "name": "form_data",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "layout",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "form_rules",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "is_right",
+              "description": "是不是右边弹窗",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "title",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "confirmButtonText",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'确定'"
+            },
+            {
+              "name": "withoutForm",
+              "description": "不需要form标签",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "noBtn",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "show_btn_loading",
+              "description": "点击确定是否显示loading，需要在resolve里面调用btn\\_loading\\_end关闭",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "contentBoxStyle",
+              "description": "内容包裹原始样式",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "is_full",
+              "description": "是否全屏弹窗,没有作用，只是提示手机端",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "closeConfirm",
+              "description": "关闭确认，返回promise",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            },
+            {
+              "name": "isWhite",
+              "description": "是否是白色背景,没有作用，只是提示手机端",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "close"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "leftFooter"
+            },
+            {
+              "name": "submitButton"
+            }
+          ],
+          "source": {
+            "module": "./dist/modal/xb-form-modal.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-gray-tool",
+          "description": "一个空div，为了和手机端代码一致",
+          "attributes": [
+            {
+              "name": "height",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "10"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-gray-tool.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-img-list-view",
+          "description": "",
+          "attributes": [
+            {
+              "name": "list",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "width",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'100px'"
+            },
+            {
+              "name": "height",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'100px'"
+            },
+            {
+              "name": "delParams",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "del"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-img-list-view.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-img-view",
+          "description": "",
+          "attributes": [
+            {
+              "name": "src",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "group",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-img-view.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-import",
+          "description": "",
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"导入模板\""
+            },
+            {
+              "name": "tempUrl",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "name": "submitApi",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              },
+              "default": "()=>{\r\n    return ()=>{}\r\n}"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-import.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "string|number"
+              }
+            },
+            {
+              "name": "placeholder",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'请输入'"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-attachments",
+          "description": "",
+          "attributes": [
+            {
+              "name": "show_tip",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "()=>true"
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "biz_type",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "is_store",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "()=>1"
+            },
+            {
+              "name": "max",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "()=>30"
+            },
+            {
+              "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "()=>false"
+            },
+            {
+              "name": "onBeforeUpload",
+              "description": "(file) =>  Promise\n\n上传前的处理 resolve(file)时 使用新文件， resolve() 继续上传， resolve(false) 停止上传",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            },
+            {
+              "name": "up_type",
+              "description": "上传类型， image，video,image_video，file",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'file'"
+            },
+            {
+              "name": "accept",
+              "description": "自定义accept，有特殊需求可以传这个",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            },
+            {
+              "name": "upfileApi",
+              "description": "export const upfileApi = params =>\n  axios.post(\"/upfile_server/core/upfile/index\", params);",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            },
+            {
+              "name": "toMp3Url",
+              "description": "如果有音频文件，需要传这个 <br>\n\nprocess.env.VUE_APP_ApiUrl = http://new.szcgtest.xbcx.com.cn/szcg/admin <br />\n`${process.env.VUE_APP_ApiUrl}/upfile_server/core/upfile/mp3?ses_token=${LoginUtil.getToken()}`",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "tips"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-attachments/xb-input-attachments.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-date-time-picker",
+          "description": "",
+          "attributes": [
+            {
+              "name": "format",
+              "description": "显示格式化",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'YYYY-MM-DD'"
+            },
+            {
+              "name": "showTime",
+              "description": "{format:'HH:mm:ss'} ，根据格式化值，显示时间框",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "valueFormat",
+              "description": "默认返回 moment  对象，格式化",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "v-model",
+              "description": "value",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "minDate",
+              "value": {
+                "kind": "expression",
+                "type": "date"
+              }
+            },
+            {
+              "name": "maxDate",
+              "value": {
+                "kind": "expression",
+                "type": "date"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-date-time-picker.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-date-time-range-picker",
+          "description": "",
+          "attributes": [
+            {
+              "name": "format",
+              "description": "显示格式化",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'YYYY-MM-DD'"
+            },
+            {
+              "name": "showTime",
+              "description": "{format:'HH:mm:ss'} ，根据格式化值，显示时间框",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "valueFormat",
+              "description": "默认返回 moment  对象，格式化",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "v-model",
+              "description": "value {start:'',end:''}",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "replaceFields",
+              "description": "替换，开始、结束字段",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{start:'start', end:'end',  }"
+            },
+            {
+              "name": "minDate",
+              "value": {
+                "kind": "expression",
+                "type": "date"
+              }
+            },
+            {
+              "name": "maxDate",
+              "value": {
+                "kind": "expression",
+                "type": "date"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-date-time-range-picker.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-img-multiple",
+          "description": "",
+          "attributes": [
+            {
+              "name": "show_tip",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "()=>true"
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "biz_type",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "is_store",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "()=>1"
+            },
+            {
+              "name": "max",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "()=>30"
+            },
+            {
+              "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "()=>false"
+            },
+            {
+              "name": "upfileApi",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-img-multiple.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-img-single",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            },
+            {
+              "name": "biz_type",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "is_store",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "1"
+            },
+            {
+              "name": "upfileApi",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-img-single.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-map-pop",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "对象 {\n          address:\"\",\n        lng:\"\",\n        lat:\"\"\n}",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-map-select/xb-input-map-pop.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-map-select",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "对象 {\n          address:\"\",\n        lng:\"\",\n        lat:\"\"\n}",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            },
+            {
+              "name": "canEdit",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "simple_address",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "name": "mapStyle",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-map-select/xb-input-map-select.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-map-show",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "description": "{lng:'',lat:'',address:''}",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "()=>{}"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-map-select/xb-input-map-show.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-multi-select",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            },
+            {
+              "name": "list",
+              "description": "[{id:'',name:'',selectable:true,}",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "ipt_type",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'checkbox'"
+            },
+            {
+              "name": "id_field",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'id'"
+            },
+            {
+              "name": "name_field",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'name'"
+            },
+            {
+              "name": "mode_type",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'multiple'"
+            },
+            {
+              "name": "placeholder",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'请选择'"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "changeValue",
+              "description": "<strong>推荐使用这个事件，属性统一</strong>\n选中的id、item"
+            },
+            {
+              "name": "changeSelect",
+              "description": "选择时的事件，这里一般是需要自己处理选择数据，所以不会用v-model"
+            }
+          ],
+          "slots": [
+            {
+              "name": "maxTagPlaceholder"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-multi-select.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-select",
+          "description": "",
+          "attributes": [
+            {
+              "name": "v-model",
+              "description": "value",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            },
+            {
+              "name": "list",
+              "description": "[{id:'',name:'',selectable:true,}",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "out_type",
+              "description": "array ，单选时，也可以返回数组",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "ipt_type",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'radio'"
+            },
+            {
+              "name": "id_field",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'id'"
+            },
+            {
+              "name": "allow_cancel",
+              "description": "允许取消",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            },
+            {
+              "name": "not_int_list_label",
+              "description": "不在列表，显示",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "name_field",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'name'"
+            },
+            {
+              "name": "placeholder",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'请选择'"
+            }
+          ],
+          "events": [
+            {
+              "name": "input",
+              "description": "选中的id"
+            },
+            {
+              "name": "changeValue",
+              "description": "<strong>推荐使用这个事件，属性统一</strong>\n选中的id、item"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-select.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-input-textarea-line-num",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "placeholder",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'第一行请输入标题，例:国家/省份/城市/区县\\n中国/四川省/成都市/武侯区'"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-input-textarea-line-num.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-layout-space",
+          "description": "",
+          "attributes": [
+            {
+              "name": "transparent",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "slots": [
+            {
+              "name": "count"
+            },
+            {
+              "name": "filter"
+            },
+            {
+              "name": "button"
+            },
+            {
+              "name": "table"
+            },
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-layout-space.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-loading-spin",
+          "description": "",
+          "slots": [
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-loading-spin.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-right-modal",
+          "description": "",
+          "attributes": [
+            {
+              "name": "form_data",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "layout",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "form_rules",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "withoutForm",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            },
+            {
+              "name": "title",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "''"
+            },
+            {
+              "name": "confirmButtonText",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'确定'"
+            },
+            {
+              "name": "noBtn",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "show_btn_loading",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "close"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/modal/xb-right-modal.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-simple-collapse",
+          "description": "",
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "icon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'caret'"
+            },
+            {
+              "name": "collapse_t_style",
+              "value": {
+                "kind": "expression",
+                "type": "any"
+              }
+            },
+            {
+              "name": "xb_collapse_txt_style",
+              "value": {
+                "kind": "expression",
+                "type": "any"
+              }
+            },
+            {
+              "name": "default_open",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "()=>false"
+            },
+            {
+              "name": "group",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": ""
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "title"
+            },
+            {
+              "name": "rightTitle"
+            },
+            {
+              "name": "default"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-simple-collapse.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-simple-modal",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "title",
+              "value": {
+                "kind": "expression",
+                "type": "''"
+              }
+            },
+            {
+              "name": "confirmButtonText",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "'确定'"
+            },
+            {
+              "name": "autoHeight",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            },
+            {
+              "name": "noBtn",
+              "value": {
+                "kind": "expression",
+                "type": "false"
+              }
+            },
+            {
+              "name": "slotStyle",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{}"
+            },
+            {
+              "name": "onModalClose",
+              "value": {
+                "kind": "expression",
+                "type": "func"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "close"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
+            },
+            {
+              "name": "footer"
+            },
+            {
+              "name": "leftFooter"
+            },
+            {
+              "name": "submitButton"
+            }
+          ],
+          "source": {
+            "module": "./dist/modal/xb-simple-modal.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-simple-slide",
+          "description": "",
+          "attributes": [
+            {
+              "name": "show_num",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "4"
+            },
+            {
+              "name": "height",
+              "value": {
+                "kind": "expression",
+                "type": "number|string"
+              },
+              "default": "'60'"
+            },
+            {
+              "name": "show_pots",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "prev"
+            },
+            {
+              "name": "next"
+            }
+          ],
+          "source": {
+            "module": "./dist/page-show/xb-simple-slide.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-tabs",
+          "description": "标签页",
+          "attributes": [
+            {
+              "name": "is_ant_tab",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "name": "list",
+              "value": {
+                "kind": "expression",
+                "type": "array"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "active_tab",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "1"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            }
+          ],
+          "source": {
+            "module": "./dist/page/xb-tabs.vue",
+            "symbol": "default"
+          }
+        },
+        {
+          "name": "xb-tree-simple-select",
+          "description": "",
+          "attributes": [
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "null"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "source": {
+            "module": "./dist/input/xb-tree-simple-select.vue",
+            "symbol": "default"
+          }
+        }
+      ]
+    }
+  }
+}

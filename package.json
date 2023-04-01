@@ -1,0 +1,50 @@
+{
+  "name": "xb-lib-view",
+  "version": "1.0.0",
+  "description": "新的公共web组件库",
+  "author": "",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build",
+    "web-types": "vue-docgen-web-types",
+    "es-doc": "esdoc"
+  },
+  "main": "dist/index.js",
+  "dependencies": {
+    "turf": "^3.0.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@testing-library/vue": "^5.8.3",
+    "@vue/cli-plugin-babel": "~4.2.2",
+    "@vue/cli-service": "~4.2.2",
+    "@vue/composition-api": "^1.4.9",
+    "ant-design-vue": "^1.7.8",
+    "documentation": "^14.0.0",
+    "esdoc": "^1.1.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-importpath-plugin": "^1.0.2",
+    "esdoc-standard-plugin": "^1.0.0",
+    "jsdoc": "^3.6.11",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "moment": "^2.29.1",
+    "viewerjs": "^1.9.0",
+    "vue": "^2.6.14",
+    "vue-cli-plugin-styleguidist": "~4.45.0",
+    "vue-docgen-api": "^4.46.0",
+    "vue-docgen-web-types": "^0.1.7",
+    "vue-router": "^3.1.5",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC",
+
+  "typings": "types/index.d.ts",
+  "web-types": "tours/web-types.json"
+}
